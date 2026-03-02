@@ -1,0 +1,104 @@
+@layer reset, init, design;
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@layer reset {
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  img, picture, video, canvas, svg {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+  }
+
+  button, input, textarea, select {
+    font: inherit;
+    color: inherit;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-indent: 0;
+    border-color: inherit;  
+  }
+
+  menu {
+    list-style: none;
+  }
+}
+
+@layer init{
+    :root{
+      --color-badge-warranty: #008000;
+      --color-badge-variant: #006ce5;
+      --color-button: #1c8000;
+      --color-button-hover: #27b200;
+      --color-available: #4d9856;
+      --font-family-default: Roboto, sans-serif;
+      --font-size-badge: 0.875rem;
+      --font-weight-badge: 550;
+    }
+
+    .image{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+
+@layer design{
+    .cards__wrapper{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        margin-top: 3rem;
+        margin-left: 3rem;
+    }
+    .card{
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 7;
+        padding: 1.25rem;
+    }
+    .badges{  
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: .3125rem;
+    }
+    .badge{
+      color: white;
+      border-radius: .250em;
+      font-size: var(--font-size-badge);
+      font-family: var(--font-family-default);
+      font-weight: var(--font-weight-badge);
+      text-align: center;
+      padding: .1875rem .250rem;
+    }
+    .badge__variant{
+      background-color: var(--color-badge-variant);
+    }
+    .badge__warranty{
+      background-color: var(--color-badge-warranty);
+    }
+    .badge__img > img{
+      width: 3rem;
+      height: auto;
+      object-fit: contain;
+    }
+    .card__title > a{
+        text-decoration: none;
+        font-family: 'Fira Sans';
+        color: black;
+    }
+    .card__title{
+        display: inline-block;
+    }
+    .card__description{
+        font-family: var(--font-family-default);
+    }
+}
