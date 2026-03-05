@@ -44,9 +44,9 @@
     }
 
     .image{
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
     }
 }
 
@@ -56,18 +56,18 @@
       background-color: #f8f8f8;
     }
     .cards__wrapper{
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        margin-top: 3rem;
-        margin-left: 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      margin-top: 3rem;
+      margin-left: 3rem;
     }
     .card{
-        background-color: white;
-        display: grid;
-        grid-template-rows: subgrid;
-        grid-row: span 7;
-        position: relative;
-        padding: 1.25rem;
+      background-color: white;
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: span 7;
+      position: relative;
+      padding: 1.25rem;
     }
     .badges{  
       display: flex;
@@ -102,23 +102,41 @@
       height: 13.75em;
     }
     .card__title > a{
-        text-decoration: none;
-        font-family: 'Fira Sans';
-        color: black;
-        font-size: 1.125rem;
-        line-height: 1.5;
+      text-decoration: none;
+      font-family: 'Fira Sans';
+      color: black;
+      font-size: 1.125rem;
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
     }
     .card__title{
-        display: inline-block;
-        margin-bottom: .625rem;
+      display: inline-block;
+      margin-bottom: .625rem;
+    }
+    .card__available-wrapper::before{
+      display: inline-block;
+      content: "";
+      height: .5em;
+      aspect-ratio: 1/1;
+      background-color: var(--color-available);
+      border-radius: 50%;
+    }
+    .card__available-wrapper{
+      display: flex;
+      align-items: center;
+      gap: .5em;
     }
     .card__description{
-        font-family: var(--font-family-default);
-        font-size: var(--font-size-default);
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 4;
-        overflow: hidden;
+      font-family: var(--font-family-default);
+      font-size: var(--font-size-default);
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+      overflow: hidden;
+      margin-bottom: 2rem;
     }
     .card__price{
       display: flex;
@@ -136,6 +154,7 @@
       justify-content: center;
       align-items: center;
       background-color: var(--color-button);
+      margin-bottom: 2rem;
       padding: .625rem 1.25rem;
       height: 2.5rem;
       font-size: var(--font-size-default);
@@ -148,9 +167,19 @@
       background-color: var(--color-button-hover);
     }
     .card__available{
-      
+      display: flex;
+      flex-direction: column;
+      gap: 0.25em;
+      color: #4c4c4c;
+      font-family: var(--font-family-default);
+      font-weight: 400;
+      font-size: .8125rem;
     }
-    .card__available::before{
-      
+    .card__available-towns{
+      font-weight: 600;
+      text-decoration: underline;
+      font-size: .875rem;
+      color: var(--color-available);
+      cursor: pointer;
     }
 }
