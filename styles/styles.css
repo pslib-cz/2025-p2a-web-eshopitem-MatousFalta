@@ -155,6 +155,7 @@
       white-space: nowrap;
     }
     .card__button > a{
+      display: block;
       text-align: center;
       background-color: var(--color-button);
       margin-bottom: 2rem;
