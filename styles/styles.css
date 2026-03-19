@@ -62,7 +62,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       margin-top: 3rem;
-      margin-left: 3rem;
+      margin-left: 3rem;  
     }
     .card{
       background-color: white;
@@ -155,9 +155,7 @@
       white-space: nowrap;
     }
     .card__button > a{
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      text-align: center;
       background-color: var(--color-button);
       margin-bottom: 2rem;
       padding: .625rem 1.25rem;
@@ -200,7 +198,6 @@
       gap: .375em;
     }
     .card__footer-icon_truck{
-      display: flex;
       flex-shrink: 0;
       background-color: var(--color-bg-footer-img);
       border-radius: .75em;
@@ -218,7 +215,6 @@
       font-family: var(--font-family-default);
     }
     .card__footer-icon_info{
-      display: flex;
       flex-shrink: 0;
       border-radius: 50%;
       background-color: var(--color-bg-footer-img);
